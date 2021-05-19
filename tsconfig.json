@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    /* Paths */
+    "outDir": "./dist",
+
+    /* Project */
+    "target": "es2018",
+    "module": "ESNext", // TypeScript is not used for building, allow all modern features
+    "lib": ["DOM", "ESNext"],
+    /* Build */
+    // `tsc` only used to build type declaration files (`.d.ts`)
+    "declaration": true,
+    "sourceMap": true,
+
+    /* Imports */
+    "moduleResolution": "Node",
+    // Yup, we are using Node
+    "forceConsistentCasingInFileNames": true,
+    // Error out if import and file system have a casing mismatch. Recommended by TS.
+    // Significant perf increase by skipping checking .d.ts files, particularly those in node_modules. Recommended by TS.
+    "skipLibCheck": true,
+    // Allow importing .json files
+    "resolveJsonModule": true,
+
+    /* Additional */
+    "strict": true,
+    "pretty": true,
+    "noImplicitAny": false,
+    "allowJs": true,
+    "noEmit": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "noFallthroughCasesInSwitch": true,
+    "types": ["vite/client"]
+  },
+  "exclude": ["node_modules"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "typings"]
+}
