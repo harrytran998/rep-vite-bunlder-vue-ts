@@ -9,3 +9,4 @@ Button.install = (vue: App) => {
 }
 
 export default Button
+export * from './types'

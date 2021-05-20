@@ -1,13 +1,9 @@
-// import type { App } from 'vue'
-// export type ButtonNativeType = 'button' | 'submit' | 'reset'
+import type { CommonProps } from '@alluvial-ui/utils';
+export interface ButtonProps extends Partial<CommonProps> {
+  nativeType?: 'submit' | 'reset' | 'button';
+  isFullWidth?: boolean;
+  isLoading?: boolean;
+  isDisabled?: boolean;
+}
 
-// export type ComponentSize = 'small' | 'medium' | 'large'
-
-// export interface ButtonProps {
-//   nativeType?: ButtonNativeType
-//   isFullWidth?: boolean
-//   isLoading?: boolean
-//   isDisabled?: boolean
-// }
-
-// export type SFCWithInstall<T> = T & { install(app: App): void }
+export type ButtonNativeType = 'button' | 'submit' | 'reset';
